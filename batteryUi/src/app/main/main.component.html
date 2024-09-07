@@ -1,0 +1,39 @@
+<div class="bg-gray-200 ">
+    <nav class="bg-white border-b py-3 border-gray-300 fixed top-0 w-full z-50">
+      <div class="flex justify-between items-center px-2">
+        <div class="flex justify-around">
+          <!-- <button id="menuBtn" (click)="toggleSideNav = !toggleSideNav">
+            <i class="text-gray-500 fas fa-bars text-primary-50 text-lg"></i>
+          </button> -->
+          <div class="ml-1 inline px-5" (click)="toggleSideNav = !toggleSideNav">
+            <img class="inline" width="40" src="../../assets/electricity.png" alt="" /> 
+            <h3 class="inline text-2xl pt-3 font-extrabold">PowerStation</h3>
+          </div>
+        </div>
+  
+        <div class="space-x-4">
+          <button>
+            <i class="text-gray-500 fas fa-bell text-primary-50 text-lg"></i>
+          </button>
+          <div class="relative inline-block text-left">
+            <button (click)="toggleDropdown()" class="w-full bg-white  text-gray-700 py-2 px-4 rounded inline-flex justify-between items-center">
+              <i class="text-gray-500 fas fa-user text-primary-50 text-lg"></i>
+            </button>
+          
+            <div *ngIf="isOpen" class="absolute z-50 mt-2 rounded-md shadow-lg w-max right-1 bg-white border border-gray-200">
+              <div class="py-1 text-gray-700 dark:text-gray-400 text-sm" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100" role="menuitem">Option 1</a> -->
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100" role="menuitem">{{user.username}}</a>
+                <a href="#" (click)="clearToken()" class="block px-4 py-2 hover:bg-gray-100" role="menuitem">Exit <i class="fa-solid pl-10 fa-arrow-right-from-bracket"></i></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

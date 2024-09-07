@@ -1,0 +1,7 @@
+.apexcharts-data-label {
+    border-radius: 50% !important; /* Force data labels to be circular */
+    padding: 10px !important; /* Adjust padding to maintain circle shape */
+    line-height: 1; /* Adjust line-height if text appears out of bounds */
+    height: 20px;
+    width: 20px;
+  }

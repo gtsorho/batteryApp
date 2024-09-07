@@ -1,0 +1,41 @@
+{
+  "name": "verification_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:frontend": "cd batteryUi && npm install && npm run build",
+    "build:backend": "npm install && tsc ",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start": "node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": " node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/ssr": "^17.3.7",
+    "@types/express": "^4.17.21",
+    "@types/sequelize": "^4.28.20",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.9.7",
+    "nodemon": "^3.1.0",
+    "sequelize": "^6.37.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/multer": "^1.4.11"
+  }
+}
